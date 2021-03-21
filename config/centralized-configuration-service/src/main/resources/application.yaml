@@ -1,0 +1,19 @@
+logging:
+  level:
+    org:
+      springframework : trace
+
+server:
+  port: 9101
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+#          clone-on-start: true
+          default-label: main
+#          uri: /home/gfoo/tmp/config
+          uri: https://github.com/gfoo/microservice_survey
+          searchPaths: config
